@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="John Shelburne" /><link rel="canonical" href="https://www.johnshelburne.com/mkdocs/1-Ingest-Domain/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>The Ingest Domain - MkDocs Material</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/tokyonight.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "The Ingest Domain";
+        var mkdocs_page_input_path = "1-Ingest-Domain.md";
+        var mkdocs_page_url = "/mkdocs/1-Ingest-Domain/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="..">
+          <img src="../images/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">The Ingest Domain</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#key-concepts-and-entities-in-the-ingest-domain">Key Concepts and Entities in the Ingest Domain:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ingest-domain-process-breakdown">Ingest Domain Process Breakdown:</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-data-collection">1. Data Collection:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-filtering-bonds-bondspec">2. Filtering Bonds (BondSpec):</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-filtering-bond-prices-bondpricespec">3. Filtering Bond Prices (BondPriceSpec):</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-assigning-bonds-to-universes">4. Assigning Bonds to Universes:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-value-object-assignment">5. Value Object Assignment:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-specifications-for-universes-universespec">6. Specifications for Universes (UniverseSpec):</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#7-finalizing-ingested-data">7. Finalizing Ingested Data:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-relationships-in-the-ingest-domain">Key Relationships in the Ingest Domain:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#purpose-of-the-ingest-domain">Purpose of the Ingest Domain:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#interpretation">Interpretation:</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Bloomberg/">Bloomberg</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Bond-Universe/">Purpose</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Candidate/">Candidate</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Classifications/">Classification Filtering in Bonds</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Data-Source-Specifications/">Data Source Specifications</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Domain-Model/">Combined Domain Model Diagram</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../EWM-DOD-Definitions/">Tolerance Metrics ewm_tolerance and dod_tolerance</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Front-End/">The Front End</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Functions/">Functions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../GCP-Alternatives/">GCP Current Workflow</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Generate/">Generate Domain</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Idea-Generation/">Idea Candidate Creation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Important-Definitions/">Understanding Key Concepts**</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Questions/">Research on Current Questions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../model/">Forecasting Models - How many exist?</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../stationary-model/">Stationarity Model</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">MkDocs Material</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">The Ingest Domain</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="the-ingest-domain">The Ingest Domain</h1>
+<p><img alt="diagram.drawio.svg" src="Domain-Model/uploads/b501a999beb7c2f5b66fd303c13a587c/diagram.drawio.svg" /></p>
+<p>The <strong>Ingest Domain</strong> in the Katana Domain Model represents the first stage in the pipeline where raw data (such as bonds and their prices) is collected, processed, and organized into a structured form that can be further analyzed and used in generating trade ideas. The goal of the Ingest process is to ensure that only relevant and high-quality data is passed on for further analysis, making it an essential part of the data preparation process.</p>
+<h3 id="key-concepts-and-entities-in-the-ingest-domain">Key Concepts and Entities in the Ingest Domain:</h3>
+<ol>
+<li><strong>Bond</strong> (Entity):<pre><code>- The primary financial instrument considered in the Ingest process. Bonds have several key attributes, such as:
+        - `ISIN`: The unique identifier for each bond.
+        - `Universe`: The financial universe or category to which the bond belongs (e.g., "USD Investment Grade," "EUR High Yield").
+        - Metadata like `IssuerName`, `CountryOfRisk`, `RatingCategory`, `MaturityCategory`, etc.
+- Bonds are the central data point around which the entire process revolves.
+</code></pre>
+<ol>
+<li>
+<p><strong>BondPrice</strong> (Entity):</p>
+<ul>
+<li>This represents the price of a bond at a specific point in time. Key attributes include:
+        - <code>ISIN</code>: Links the price to the bond it belongs to.
+        - <code>AsOf</code>: The timestamp indicating when the price was recorded.
+        - <code>ZSpread</code>: A measure of risk for the bond compared to risk-free instruments.</li>
+<li>Bond prices are essential for evaluating trade ideas and are collected for further analysis.</li>
+<li>
+<p><strong>BondSpec</strong> (Specification):</p>
+</li>
+<li>
+<p>A set of rules or criteria that filters bonds based on certain characteristics before they can be passed on for further processing.</p>
+</li>
+<li>For example, <strong>BondSpec</strong> might require bonds to have a minimum amount of outstanding debt or a maximum number of months to maturity.</li>
+<li>This ensures that only bonds meeting specific financial standards are included in the downstream processes.</li>
+<li>
+<p><strong>BondPriceSpec</strong> (Specification):</p>
+</li>
+<li>
+<p>Similarly, this specification filters bond prices based on criteria such as:
+        - The timestamp (<code>MinAsOf</code>), ensuring the price data is recent.
+        - The <code>ZSpread</code>, ensuring that only bonds with acceptable risk levels (via their ZSpread values) are included.</p>
+</li>
+<li>
+<p><strong>Universe</strong> (Entity):</p>
+</li>
+<li>
+<p>A collection or category of bonds. Universes help group bonds based on specific characteristics, such as geographical location, risk profile, or bond type (e.g., "USD High Yield" or "EUR Investment Grade").</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="ingest-domain-process-breakdown">Ingest Domain Process Breakdown:</h3>
+<h4 id="1-data-collection">1. <strong>Data Collection</strong>:</h4>
+<ul>
+<li><strong>Bond and BondPrice Data</strong>: The Ingest process starts by pulling in raw bond and bond price data from various sources. This data could come from financial data providers, exchanges, or internal systems.</li>
+<li>The data includes key bond attributes (e.g., ISIN, Issuer, Country of Risk) and bond price records with associated timestamps and ZSpread values.</li>
+</ul>
+<h4 id="2-filtering-bonds-bondspec">2. <strong>Filtering Bonds (BondSpec)</strong>:</h4>
+<ul>
+<li>
+<p>Once the data is ingested, the <strong>BondSpec</strong> comes into play. This specification filters bonds to ensure that only those that meet certain criteria are passed on.</p>
+</li>
+<li>
+<p>For example, <strong>BondSpec</strong> might filter out bonds that have too much time until maturity (<code>MaxMonthsToMature</code>) or that have insufficient liquidity (<code>MinAmountOutstanding</code>).</p>
+</li>
+<li>
+<p>This stage ensures that only bonds that are tradable and relevant for analysis are included in the process. Bonds that fail to meet the criteria are excluded.</p>
+</li>
+</ul>
+<p>This happens in the 
+<a href="https://gitlab.com/katanalabs/katana/-/blob/master/pipelines/generate/components/filters/universes.py">universes.py file in the generate/components</a></p>
+<h4 id="3-filtering-bond-prices-bondpricespec">3. <strong>Filtering Bond Prices (BondPriceSpec)</strong>:</h4>
+<ul>
+<li>
+<p>After the bonds have been filtered, the <strong>BondPriceSpec</strong> applies to the associated bond prices. This specification ensures that the bond price data is up-to-date and within acceptable risk limits.</p>
+</li>
+<li>
+<p>For example, <strong>BondPriceSpec</strong> might exclude prices that are too old (<code>MinAsOf</code>) or prices with a ZSpread value that is too high or too low (<code>MinZSpread</code>, <code>MaxZSpread</code>).</p>
+</li>
+<li>This ensures that only current, relevant price data is considered for each bond.</li>
+</ul>
+<h4 id="4-assigning-bonds-to-universes">4. <strong>Assigning Bonds to Universes</strong>:</h4>
+<ul>
+<li>
+<p>Bonds that pass the filtering process are assigned to specific <strong>Universes</strong> based on their characteristics. A universe represents a category or set of bonds that share similar traits.</p>
+</li>
+<li>
+<p>For example, bonds might be grouped into universes like "USD Investment Grade" or "EUR High Yield." These universes help categorize the bonds and enable further downstream analysis within specific financial contexts.</p>
+</li>
+</ul>
+<h4 id="5-value-object-assignment">5. <strong>Value Object Assignment</strong>:</h4>
+<ul>
+<li>
+<p>The Ingest process also involves assigning various <strong>Value Objects</strong> to the bonds. These value objects provide additional metadata for the bonds, such as:</p>
+<pre><code>- **Classification**: The bond's sector (e.g., Corporate, Government).
+
+- **Country**: The bond's country of risk.
+
+- **Currency**: The currency in which the bond is issued.
+
+- **Rating**: The credit rating of the bond.
+</code></pre>
+</li>
+<li>
+<p>These value objects are non-unique and provide contextual information to help categorize the bonds within the universes. For example, a bond issued by a corporate entity in the USA would have a classification of "Corporate" and a country of risk of "USA."</p>
+</li>
+</ul>
+<h4 id="6-specifications-for-universes-universespec">6. <strong>Specifications for Universes (UniverseSpec)</strong>:</h4>
+<ul>
+<li>The <strong>UniverseSpec</strong> defines criteria for including bonds in specific universes. For example, a universe might only include bonds with a minimum amount of outstanding debt or bonds issued in certain countries or sectors.</li>
+<li>Bonds that do not meet the criteria of a particular universe are excluded from that universe.</li>
+<li>This helps to group bonds effectively and ensures that universes contain only the bonds that meet the desired financial characteristics.</li>
+</ul>
+<h4 id="7-finalizing-ingested-data">7. <strong>Finalizing Ingested Data</strong>:</h4>
+<ul>
+<li>Once the bonds have been filtered, their prices validated, and they are assigned to universes, the ingested data is ready for downstream processes.</li>
+<li>This data, now organized and filtered, can be passed on to the <strong>Generate Domain</strong>, where it is further analyzed to produce actionable trade ideas.</li>
+</ul>
+<h3 id="key-relationships-in-the-ingest-domain">Key Relationships in the Ingest Domain:</h3>
+<ul>
+<li><strong>Bond to BondPrice</strong>:
+        - Each bond can have multiple prices over time, and these prices are filtered by <strong>BondPriceSpec</strong> to ensure only relevant price records are considered.</li>
+<li><strong>Bond to Universe</strong>:
+        - Bonds are assigned to specific universes based on their characteristics and the criteria defined in <strong>UniverseSpec</strong>.</li>
+<li><strong>Value Objects to Bonds</strong>:
+        - Value objects such as <strong>Classification</strong>, <strong>Country</strong>, <strong>Currency</strong>, and <strong>Rating</strong> are assigned to bonds to provide additional context for how the bonds should be categorized in the universes.</li>
+<li><strong>BondSpec and BondPriceSpec</strong>:
+        - These specifications play a critical role in filtering the raw bond data to ensure that only bonds meeting the criteria are passed on for further processing.</li>
+</ul>
+<h3 id="purpose-of-the-ingest-domain">Purpose of the Ingest Domain:</h3>
+<ul>
+<li><strong>Filtering and Structuring Data</strong>:
+        - The Ingest Domain serves to organize and filter raw bond data, ensuring that only relevant, high-quality bonds and prices are included in the downstream analysis.</li>
+<li><strong>Categorization and Contextualization</strong>:
+        - By assigning bonds to universes and enriching them with value objects, the Ingest Domain helps create a structured representation of the bond market that can be easily analyzed.</li>
+<li><strong>Prepares for Trade Idea Generation</strong>:
+        - The structured, filtered data is then ready to be passed on to the Generate Domain, where it will be used to create <strong>Trade Ideas</strong> based on the bonds' price trends, risk levels, and other financial factors.</li>
+</ul>
+<h3 id="interpretation">Interpretation:</h3>
+<p>The <strong>Ingest Domain</strong> is a critical step in the bond trading system, as it ensures that the data fed into later stages is clean, organized, and relevant. By filtering out irrelevant bonds and prices, enriching bonds with value objects, and categorizing them into universes, the Ingest Domain ensures that the subsequent analysis is based on high-quality data. This process lays the foundation for generating accurate and actionable <strong>Trade Ideas</strong> in the later stages.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Welcome To The Katana Wiki"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Bloomberg/" class="btn btn-neutral float-right" title="Bloomberg">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Bloomberg/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

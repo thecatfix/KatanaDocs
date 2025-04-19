@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="John Shelburne" /><link rel="canonical" href="https://www.johnshelburne.com/mkdocs/stationary-model/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Stationarity Model - MkDocs Material</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/tokyonight.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Stationarity Model";
+        var mkdocs_page_input_path = "stationary-model.md";
+        var mkdocs_page_url = "/mkdocs/stationary-model/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="..">
+          <img src="../images/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../1-Ingest-Domain/">The Ingest Domain</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Bloomberg/">Bloomberg</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Bond-Universe/">Purpose</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Candidate/">Candidate</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Classifications/">Classification Filtering in Bonds</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Data-Source-Specifications/">Data Source Specifications</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Domain-Model/">Combined Domain Model Diagram</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../EWM-DOD-Definitions/">Tolerance Metrics ewm_tolerance and dod_tolerance</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Front-End/">The Front End</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Functions/">Functions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../GCP-Alternatives/">GCP Current Workflow</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Generate/">Generate Domain</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Idea-Generation/">Idea Candidate Creation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Important-Definitions/">Understanding Key Concepts**</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Questions/">Research on Current Questions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../model/">Forecasting Models - How many exist?</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Stationarity Model</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#classes">Classes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#stationaritymodelloader">StationarityModelLoader</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#parameters">Parameters:</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#attributes">Attributes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#notes">Notes</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#stationary-model-in-experiment-project">Stationary Model In Experiment Project</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">MkDocs Material</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Stationarity Model</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="stationarity-model">Stationarity Model</h1>
+<p><a href="src/generate/components/models/stationarity_model.py">stationarity_model</a></p>
+<p>Overview
+The stationarity_model.py file implements a stationarity model for analyzing and predicting investment ideas. It contains two main classes: StationarityModelLoader and StationarityModel. This model is designed to evaluate the stationarity of financial time series data and make predictions based on various similarity metrics.</p>
+<h2 id="classes">Classes</h2>
+<h3 id="stationaritymodelloader">StationarityModelLoader</h3>
+<p>This class is responsible for loading the StationarityModel.</p>
+<p>Methods</p>
+<pre><code>load
+def load(self, model_path: str, model_options: Optional[Dict[str, Any]] = None) -&gt; Model
+</code></pre>
+<p>Loads the StationarityModel from the given path.</p>
+<h2 id="parameters">Parameters:</h2>
+<p><code>model_path (str): The path to the model.
+model_options (Optional[Dict[str, Any]]): Additional options for the model.</code></p>
+<p>Returns:</p>
+<p>Model: An instance of StationarityModel.
+StationarityModel
+This class implements the stationarity model for analyzing investment ideas.</p>
+<h3 id="attributes">Attributes</h3>
+<pre><code>adf_regression (str): Type of regression for ADF test (default: 'ct').
+adf_threshold (float): Threshold for ADF test (default: 0.05).
+pearson_threshold (float): Threshold for Pearson correlation (default: 0.9).
+similarity_threshold (float): Threshold for similarity score (default: 0.7).
+zspread_to_use (str): Type of z-spread to use (default: 'zspread_mid_best').
+min_zspread_to_alert (float): Minimum z-spread to trigger an alert (default: 5.0).
+min_zscore_to_alert (float): Minimum z-score to trigger an alert (default: 1.5).
+
+### Methods
+
+
+</code></pre>
+<p>init
+def <strong>init</strong>(self, id: str, options: Optional[Dict[str, Any]] = None)
+Initializes the StationarityModel with the given ID and options.</p>
+<p>_compute_cor_similarity
+def _compute_cor_similarity(self, cor1: Optional[Country], cor2: Optional[Country]) -&gt; float
+Computes the similarity between two countries of risk.</p>
+<p>_compute_ig_similarity
+def _compute_ig_similarity(self, ig1: Optional[str], ig2: Optional[str]) -&gt; float
+Computes the similarity between two industry groups.</p>
+<p>_compute_rating_similarity
+def _compute_rating_similarity(self, rating1: Optional[Rating], rating2: Optional[Rating]) -&gt; float
+Computes the similarity between two ratings.</p>
+<p>_compute_maturity_similarity
+def _compute_maturity_similarity(self, maturity1: Optional[datetime], maturity2: Optional[datetime]) -&gt; float
+Computes the similarity between two maturity dates.</p>
+<p>_compute_similarity
+def _compute_similarity(self, candidate: IdeaCandidate) -&gt; Optional[float]
+Computes the overall similarity score for an idea candidate.</p>
+<p>_preprocess
+def _preprocess(self, candidate: IdeaCandidate) -&gt; Tuple[str, str, pd.DataFrame]
+Preprocesses the data for the given candidate. This method is currently unused.</p>
+<p>predict
+def predict(self, candidate: IdeaCandidate, opts: Dict[str, Any] = None) -&gt; ModelResult
+Makes a prediction for the given idea candidate.</p>
+<pre><code>
+### Parameters:
+
+candidate (IdeaCandidate): The idea candidate to evaluate.
+opts (Dict[str, Any]): Additional options for prediction (optional).
+
+
+Returns:
+
+ModelResult: The prediction result, including alert status, similarity score, and other metrics.
+Key Concepts
+Similarity Metrics: The model uses various similarity metrics (country of risk, industry group, rating, and maturity) to evaluate the relatedness of bonds in an idea candidate.
+
+Stationarity: While the class is named StationarityModel, the current implementation doesn't explicitly test for stationarity using methods like the Augmented Dickey-Fuller (ADF) test. The adf_score in the predict method is set to a constant value.
+
+Alert Generation: The model generates alerts based on similarity scores, bookmarks, curve trades, and z-score/z-spread thresholds.
+
+Usage
+The StationarityModel is typically used as part of a larger system for evaluating investment ideas. It's loaded using the StationarityModelLoader and then used to make predictions on IdeaCandidate objects.
+
+Example:
+</code></pre>
+<p>loader = StationarityModelLoader()
+model = loader.load("path/to/model")
+result = model.predict(idea_candidate)
+```</p>
+<h3 id="notes">Notes</h3>
+<p>The current implementation sets constant values for Pearson correlation and ADF scores in the predict method. These might be placeholders for more sophisticated calculations in future versions.
+The _preprocess method is defined but unused in the current implementation.
+The model relies heavily on pre-computed similarity scores and thresholds. Adjusting these parameters may significantly affect the model's behavior.</p>
+<h2 id="stationary-model-in-experiment-project">Stationary Model In Experiment Project</h2>
+<p><a href="https://gitlab.com/katanalabs/katana-experiments/-/blob/master/model_utils/stationarity_model.py?ref_type=heads">model_utils/stationarity_model.py</a></p>
+<p>compute_zscore(df) function:</p>
+<p>Purpose: Computes the z-score of the present dislocation for a bond pair compared to its historic variances.
+Input: A DataFrame (df) with at least two columns.
+Process: a. Calculates the difference between the first and second columns of the input DataFrame. b. Computes the last value, mean (excluding the last value), and standard deviation of this difference. c. Calculates the average of the last 3 days' values. d. Computes the absolute difference between the 3-day average and the mean. e. Calculates the z-score by dividing the absolute difference by the standard deviation.
+Output: Returns the computed z-score.
+Note: Returns 0.0 if the standard deviation or the absolute difference is zero to avoid division by zero.
+compute_pearson_coefficients(df) function:</p>
+<p>Purpose: Calculates Pearson correlation coefficients between all columns in the input DataFrame.
+Input: A DataFrame (df) with multiple columns.
+Process: a. Computes the correlation matrix using df.corr(). b. Retains only the lower triangular part of the correlation matrix. c. Stacks the results into a Series. d. Resets the index and renames columns for clarity.
+Output: Returns a DataFrame with columns 'isin-1', 'isin-2', and 'pearson' (correlation coefficient).
+compute_pearson_scores(df_of_pairs, df) function:</p>
+<p>Purpose: Computes Pearson correlation scores for given pairs of items.
+Inputs:
+df_of_pairs: A DataFrame containing pairs to be correlated.
+df: The data DataFrame used to compute correlations.
+Process: a. Calls compute_pearson_coefficients(df) to get all pairwise correlations. b. Merges these correlations with the input pairs DataFrame. c. Cleans up the resulting DataFrame by handling potential duplicates and NaN values.
+Output: Returns a DataFrame with correlation scores for the input pairs.
+compute_adf_score(df, regression='ct', min_length=30) function:</p>
+<p>Purpose: Computes the Augmented Dickey-Fuller test statistic for stationarity.
+Inputs:
+df: A DataFrame with two columns representing two time series.
+regression: The type of regression to use in the ADF test (default 'ct' for constant and trend).
+min_length: Minimum length of the time series to perform the test (default 30).
+Process: a. Computes the difference between the two input time series. b. If the resulting series is long enough, performs the ADF test using statsmodels' adfuller function. c. Returns the p-value of the test.
+Output: Returns the ADF test p-value, or 1.0 if the series is too short, or NaN if there's an error.
+compute_return(df, predict_on_date, evaluate_on_date) function:</p>
+<p>Purpose: Computes the return between two dates for a pair of time series.
+Inputs:
+df: A DataFrame with two columns representing two time series.
+predict_on_date: The date to start the return calculation.
+evaluate_on_date: The date to end the return calculation.
+Process: a. Computes the difference between the two input time series. b. Calculates the return as the difference in this spread between the evaluation and prediction dates. c. Adjusts the sign of the return based on the position relative to the mean.
+Output: Returns the computed return.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../model/" class="btn btn-neutral float-left" title="Forecasting Models - How many exist?"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../model/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

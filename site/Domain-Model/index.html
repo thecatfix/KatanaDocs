@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="John Shelburne" /><link rel="canonical" href="https://www.johnshelburne.com/mkdocs/Domain-Model/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Combined Domain Model Diagram - MkDocs Material</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/tokyonight.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Combined Domain Model Diagram";
+        var mkdocs_page_input_path = "Domain-Model.md";
+        var mkdocs_page_url = "/mkdocs/Domain-Model/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="..">
+          <img src="../images/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../1-Ingest-Domain/">The Ingest Domain</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Bloomberg/">Bloomberg</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Bond-Universe/">Purpose</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Candidate/">Candidate</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Classifications/">Classification Filtering in Bonds</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Data-Source-Specifications/">Data Source Specifications</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Combined Domain Model Diagram</a>
+    <ul class="current">
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../EWM-DOD-Definitions/">Tolerance Metrics ewm_tolerance and dod_tolerance</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Front-End/">The Front End</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Functions/">Functions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../GCP-Alternatives/">GCP Current Workflow</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Generate/">Generate Domain</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Idea-Generation/">Idea Candidate Creation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Important-Definitions/">Understanding Key Concepts**</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Questions/">Research on Current Questions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../model/">Forecasting Models - How many exist?</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../stationary-model/">Stationarity Model</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">MkDocs Material</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Combined Domain Model Diagram</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="combined-domain-model-diagram">Combined Domain Model Diagram</h1>
+<p><img alt="diagram.drawio.svg" src="Katana/uploads/046b8b8a7d39a00f97bf8ae4e24d2127/diagram.drawio.svg" /></p>
+<h1 id="ingest">Ingest</h1>
+<p><img alt="diagram.drawio.svg" src="Katana/uploads/db1a0e965242ca1a96f71a2ef0c6552f/diagram.drawio.svg" /></p>
+<h1 id="generate">Generate</h1>
+<p><img alt="diagram.drawio.svg" src="Katana/uploads/18f9fe47c5d8750f070ef294516d7707/diagram.drawio.svg" /></p>
+<h1 id="discover">Discover</h1>
+<p><img alt="diagram.drawio.svg" src="Katana/uploads/4e28525acaba636e35c78949ad138f86/diagram.drawio.svg" />
+Explaining Domain Model</p>
+<h3 id="entity">Entity</h3>
+<ul>
+<li>Data Holder: An entity holds data within your domain model.</li>
+<li>Unique Identification: Each entity is uniquely identifiable, distinguishing it from other entities.</li>
+<li>Lifecycle and Persistence: Entities have a lifecycle (creation, modification, deletion) and thus need to be persisted in a database or another storage system.</li>
+</ul>
+<h3 id="value-object">Value Object</h3>
+<ul>
+<li>Data Holder: Similar to entities, value objects hold data.</li>
+<li>Non-unique: Unlike entities, value objects don't need to be unique within the domain.</li>
+<li>On-demand Creation: They can be created as needed and are more transient.</li>
+<li>Replication and Re-use: Value objects can be replicated and reused across the system.</li>
+<li>No Lifecycle: They don't have a lifecycle and are typically not persisted, though they can be for convenience.</li>
+</ul>
+<h3 id="aggregate">Aggregate</h3>
+<ul>
+<li>Collection of Entities and Value Objects: An aggregate groups related entities and value objects.</li>
+<li>Internal Utility: The elements within an aggregate are not typically useful outside of it.</li>
+<li>Root Element: There's a root element in each aggregate that acts as an anchor point and public interface for the internal elements.</li>
+</ul>
+<h3 id="repository">Repository</h3>
+<ul>
+<li>Entity Storage and Retrieval: Repositories handle the storage and retrieval of entities, which could be aggregate roots.</li>
+<li>Abstraction Over Persistence: They abstract away the underlying persistence mechanism, like databases.</li>
+</ul>
+<h3 id="stream">Stream</h3>
+<ul>
+<li>Entity Flow: A stream is a conduit for a specific type of entity, facilitating the flow of these entities within the system.</li>
+<li>Receive and Send Entities: Streams can be used to both receive and send entities.</li>
+</ul>
+<h3 id="service">Service</h3>
+<ul>
+<li>Functionality Collection: A service in your domain model represents a collection of related functionalities.</li>
+<li>Stateless: Services typically don't have their own persisted state.</li>
+</ul>
+<h3 id="index">Index</h3>
+<ul>
+<li>The description for "Index" is missing in your glossary. Usually, an index refers to a data structure that improves the speed of data retrieval operations.</li>
+</ul>
+<h3 id="core-domain">Core Domain</h3>
+<ul>
+<li>Central Functionalities: The core domain likely includes the central, most crucial functionalities of your system. It's referenced as a separate document <a href="https://loop.microsoft.com/p/core.md">Core</a>.</li>
+</ul>
+<h3 id="sub-domains">Sub Domains</h3>
+<ul>
+<li>These are specific areas within your domain model, each focusing on different aspects of the system. They are also referenced as separate documents, indicating detailed descriptions elsewhere:<ul>
+<li>Ingest</li>
+<li>Generate</li>
+<li>Discover</li>
+<li>Authenticate &amp; Collaborate</li>
+<li>Notify</li>
+</ul>
+</li>
+</ul>
+<p>Your domain model seems well-structured, dividing the system into clear, manageable parts, each with a specific role. This structure aids in both understanding and maintaining the system.</p>
+<h1 id="core">Core</h1>
+<p>Your Core domain model, represented using a <code>mermaid</code> class diagram, clearly outlines the relationships between the primary entities in your system: <code>Bond</code>, <code>BondPrice</code>, <code>Universe</code>, and <code>TradeIdea</code>. Here's a description of the classes and their relationships:</p>
+<h3 id="classes-and-their-fields">Classes and Their Fields</h3>
+<ol>
+<li>Bond<ul>
+<li><code>ISIN</code> (International Securities Identification Number): A unique identifier for each bond.</li>
+</ul>
+</li>
+<li>BondPrice<ul>
+<li><code>ISIN</code>: The identifier of the bond, linking it to the <code>Bond</code> class.</li>
+<li><code>AsOf</code>: A timestamp indicating when the price was recorded.</li>
+<li><code>ZSpread</code>: The Z-Spread value of the bond.</li>
+</ul>
+</li>
+<li>Universe<ul>
+<li><code>Name</code>: The name of a universe. In financial contexts, a universe often refers to a collection or set of bonds.</li>
+</ul>
+</li>
+<li>TradeIdea<ul>
+<li><code>ID</code>: A unique identifier for the trade idea, derived from the concatenation of the <code>BondBuyISIN</code> and <code>BondSellISIN</code>.</li>
+</ul>
+</li>
+</ol>
+<h3 id="relationships">Relationships</h3>
+<ul>
+<li>BondPrice --&gt; Bond: Each <code>BondPrice</code> is associated with a <code>Bond</code>. The ISIN field in <code>BondPrice</code> links to the corresponding <code>Bond</code>.</li>
+<li>Universe o-- Bond: This represents a one-to-many relationship where a <code>Universe</code> can contain multiple <code>Bonds</code>.</li>
+<li>Bond *-- TradeIdea (buy and sell): A <code>TradeIdea</code> is associated with two <code>Bonds</code>, one to buy and one to sell. This is a many-to-one relationship where multiple trade ideas can involve the same bond.</li>
+<li>BondPrice *-- TradeIdea (buy and sell): Similar to the <code>Bond</code> relationship, a <code>TradeIdea</code> is also associated with the <code>BondPrice</code> for both the buying and selling bonds.</li>
+<li>Universe o-- TradeIdea: A <code>Universe</code> can contain multiple <code>TradeIdeas</code>. This relationship indicates that trade ideas are categorized or grouped under different universes.</li>
+</ul>
+<p>This class diagram effectively represents the core relationships in your financial trading system, particularly focusing on how trade ideas are formulated based on bonds, their prices, and the universes they belong to.</p>
+<pre><code>```mermaid
+classDiagram
+    class Bond {
+        string ISIN
+    }
+    class BondPrice {
+        string ISIN
+        time AsOf
+        float ZSpread
+    }
+    class Universe {
+        string Name
+    }
+    class TradeIdea {
+        string ID %% BondBuyISIN+BondSellISIN
+    }
+
+    BondPrice --&gt; Bond
+    Universe o-- Bond
+    Bond *-- TradeIdea : buy
+    BondPrice *-- TradeIdea : buy
+    Bond *-- TradeIdea : sell
+    BondPrice *-- TradeIdea : sell
+    Universe o-- TradeIdea
+```
+</code></pre>
+<h1 id="ingest_1">Ingest</h1>
+<p>The <code>Ingest</code> section of your domain model, depicted using a <code>mermaid</code> class diagram, represents the structure and relationships involved in the ingestion process of your financial trading system. This diagram showcases several classes, primarily focusing on the characteristics of bonds and their categorization within universes. Let's delve into the details:</p>
+<h3 id="classes-and-their-attributes">Classes and Their Attributes</h3>
+<ol>
+<li>Bond<ul>
+<li>An entity with fields like <code>ISIN</code> (a unique identifier) and <code>Universe</code> (the universe to which the bond belongs).</li>
+</ul>
+</li>
+<li>Universe<ul>
+<li>An entity identified by <code>Name</code>.</li>
+</ul>
+</li>
+<li>Value Objects<ul>
+<li>Include <code>Classification</code>, <code>Country</code>, <code>Currency</code>, <code>Flag</code>, <code>IssueType</code>, <code>Rating</code>, <code>Ticker</code>, <code>IndustrySectorLevel1</code>, <code>IndustrySectorLevel4</code>, and <code>PaymentCategory</code>. These are data holders without unique identifiers within the domain.</li>
+</ul>
+</li>
+<li>UniverseSpec<ul>
+<li>A specification with a field <code>MinAmountOutstanding</code>, indicating the minimum amount outstanding for a bond to be included in a universe.</li>
+</ul>
+</li>
+</ol>
+<h3 id="relationships_1">Relationships</h3>
+<ul>
+<li>Value Objects *-- UniverseSpec: Value objects like <code>Classification</code>, <code>Country</code>, etc., are included or excluded in <code>UniverseSpec</code>. This indicates that <code>UniverseSpec</code> criteria can specify the inclusion or exclusion of bonds based on these characteristics.</li>
+<li>UniverseSpec "1" ..|&gt; "1" Universe: A one-to-one relationship where <code>UniverseSpec</code> is a part of <code>Universe</code>.</li>
+<li>UniverseSpec "1" ..|&gt; "*" Bond: A one-to-many relationship where <code>UniverseSpec</code> can apply to multiple <code>Bonds</code>. This relationship suggests that <code>UniverseSpec</code> defines the criteria for including bonds in a universe.</li>
+<li>Bond "" o-- "" Universe: A many-to-many relationship indicating that bonds can belong to multiple universes and vice versa.</li>
+</ul>
+<h3 id="interpretation">Interpretation</h3>
+<p>This model primarily focuses on the criteria and specifications for including bonds in different universes. It highlights how various attributes of bonds, such as their classifications, ratings, and sectors, play a role in categorizing them. The use of value objects like <code>Country</code>, <code>Currency</code>, and <code>Rating</code> emphasizes the importance of these characteristics in the bond universe categorization process.</p>
+<p>Overall, the <code>Ingest</code> domain model provides a structured way to categorize bonds based on multiple criteria, essential for organizing and analyzing financial securities in a trading system.</p>
+<h1 id="generate_1">Generate</h1>
+<p>The <code>Generate</code> section of your domain model, illustrated using a <code>mermaid</code> class diagram, portrays the process and entities involved in generating trade ideas in your financial system. This diagram highlights the entities, value objects, specifications, and their interconnections. Let's examine the key components:</p>
+<h3 id="entities-and-value-objects">Entities and Value Objects</h3>
+<ol>
+<li>Bond<ul>
+<li>An entity characterized by <code>ISIN</code> and <code>Universe</code>.</li>
+</ul>
+</li>
+<li>BondSpec<ul>
+<li>A specification defining criteria like <code>MaxMonthsToMature</code> and <code>MinAmountOutstanding</code> for bonds.</li>
+</ul>
+</li>
+<li>BondPrice<ul>
+<li>An entity representing the price of a bond at a specific time, identified by <code>ISIN</code>, <code>AsOf</code> date, and <code>ZSpread</code>.</li>
+</ul>
+</li>
+<li>BondPriceSpec<ul>
+<li>A specification with criteria for bond prices, such as <code>MinAsOf</code>, <code>MinZSpread</code>, and <code>MaxZSpread</code>.</li>
+</ul>
+</li>
+<li>BondWithPrices<ul>
+<li>A value object representing a bond with its associated prices.</li>
+</ul>
+</li>
+<li>BondWithPricesSpec<ul>
+<li>A specification for <code>BondWithPrices</code>, including criteria like <code>MaxEWMScore</code>, <code>MaxDODScore</code>, etc.</li>
+</ul>
+</li>
+<li>Universe<ul>
+<li>An entity identified by <code>Name</code>, representing a collection of bonds.</li>
+</ul>
+</li>
+<li>Bookmark<ul>
+<li>An entity representing a bookmarked trade idea, identified by <code>TradeIdeaID</code>.</li>
+</ul>
+</li>
+<li>BondPair<ul>
+<li>A value object indicating a pair of bonds, possibly bookmarked.</li>
+</ul>
+</li>
+<li>TradeIdeaCandidate<ul>
+<li>An entity with attributes like <code>ID</code>, <code>IsBookmarked</code>, various spread values, and scores.</li>
+</ul>
+</li>
+<li>TradeIdeaCandidateSpec<ul>
+<li>A specification for trade idea candidates, including criteria like <code>MinSpreadMeanReversion</code>, <code>MinPearsonScore</code>, etc.</li>
+</ul>
+</li>
+<li>Model<ul>
+<li>An entity representing a predictive model, identified by <code>ID</code>.</li>
+</ul>
+</li>
+<li>TradeIdeaSpec<ul>
+<li>A specification for trade ideas, including criteria like <code>MinSimilarityScore</code>, <code>MinPearsonScore</code>, etc.</li>
+</ul>
+</li>
+<li>TradeIdea<ul>
+<li>An entity representing a potential trade idea, identified by a concatenated <code>ID</code> from two ISINs.</li>
+</ul>
+</li>
+</ol>
+<h3 id="relationships_2">Relationships</h3>
+<ul>
+<li>Bond -- BondWithPrices; BondPrice -- BondWithPrices: Bonds and their prices are associated with <code>BondWithPrices</code>.</li>
+<li>BondWithPrices o-- BondPair: Bond pairs are formed from bonds with prices.</li>
+<li>Bookmark ..&gt; BondPair: Bookmarks can be associated with bond pairs.</li>
+<li>BondPair ..|&gt; TradeIdeaCandidate; TradeIdeaCandidate ..|&gt; TradeIdea: Bond pairs are used to generate trade idea candidates, which can become trade ideas.</li>
+<li>Specs to Entities/Value Objects: Specifications (<code>BondSpec</code>, <code>BondPriceSpec</code>, etc.) are linked to their corresponding entities or value objects, defining criteria or rules for them.</li>
+<li>Universe o-- Bond; Universe o-- TradeIdea: Bonds and trade ideas are associated with universes.</li>
+<li>Model ..&gt; TradeIdeaSpec; TradeIdeaSpec --&gt; TradeIdeaCandidate: Models influence trade idea specifications, which in turn apply to trade idea candidates.</li>
+</ul>
+<h3 id="interpretation_1">Interpretation</h3>
+<p>This model emphasizes the generation of trade ideas from bond data. It showcases how various specifications and criteria filter and refine bonds, their prices, and pairs to form viable trade idea candidates. The presence of value objects like <code>BondWithPrices</code> and <code>BondPair</code> indicates the aggregation of data from different entities to form meaningful combinations.</p>
+<p>The use of bookmarks suggests that certain bond pairs or trade ideas can be flagged for special attention. Finally, the transition from <code>TradeIdeaCandidate</code> to <code>TradeIdea</code> signifies the final step in the generation process, where candidates are evaluated against specific models and criteria to become actionable trade ideas.</p>
+<h1 id="discover_1">Discover</h1>
+<p>The <code>Discover</code> section of your domain model, illustrated using a <code>mermaid</code> class diagram, details the structure and interactions for discovering trade ideas within your financial system. This comprehensive model includes various entities, value objects, services, and their relationships. Let's delve into its components:</p>
+<h3 id="entities-and-value-objects_1">Entities and Value Objects</h3>
+<ol>
+<li>Bond<ul>
+<li>An entity with attributes like <code>ISIN</code>, <code>Name</code>, <code>IssueDate</code>, <code>IssuerName</code>, <code>CountryOfRisk</code>, etc.</li>
+</ul>
+</li>
+<li>BondPrice<ul>
+<li>An entity representing a bond's price at a specific time, identified by <code>ISIN</code>, <code>AsOf</code> date, and <code>ZSpread</code>.</li>
+</ul>
+</li>
+<li>BondPricePair<ul>
+<li>A value object representing a pair of bond prices.</li>
+</ul>
+</li>
+<li>BondPricePairWithStats<ul>
+<li>A value object that includes statistics like <code>Diff</code>, <code>Mean</code>, <code>StdDev</code>, and an <code>IsIdea</code> flag.</li>
+</ul>
+</li>
+<li>Universe<ul>
+<li>An entity representing a collection of bonds, identified by <code>Name</code>.</li>
+</ul>
+</li>
+<li>TradeIdea<ul>
+<li>An entity representing a potential trade idea, identified by concatenated ISINs of <code>BondBuy</code> and <code>BondSell</code>.</li>
+</ul>
+</li>
+<li>Filters (TagFilter, MatchFilter, LikeFilter, RangeFilter, ExcludeFilter)<ul>
+<li>Value objects representing different types of filters used in search criteria.</li>
+</ul>
+</li>
+<li>Page<ul>
+<li>A value object for pagination details such as <code>Number</code>, <code>Size</code>, and <code>Total</code>.</li>
+</ul>
+</li>
+<li>OrderDirection (Enum) and Order<ul>
+<li><code>OrderDirection</code> is an enumeration for sorting direction, and <code>Order</code> is a value object specifying the field and direction for ordering.</li>
+</ul>
+</li>
+<li>SearchCriteria<ul>
+<li>A value object defining the search criteria, including universe, filters, order, and pagination.</li>
+</ul>
+</li>
+<li>Facets (TagFacet, RangeFacet, MatchFacet)<ul>
+<li>Value objects representing facets for search results.</li>
+</ul>
+</li>
+<li>SearchResult<ul>
+<li>A value object encapsulating the results of a search, including items, facets, order, pagination, and total item count.</li>
+</ul>
+</li>
+<li>TradeIdeaService (Service)<ul>
+<li>A service for executing searches based on <code>SearchCriteria</code> and returning <code>SearchResult</code>.</li>
+</ul>
+</li>
+</ol>
+<h3 id="relationships_3">Relationships</h3>
+<ul>
+<li>BondPrice -- Bond; BondPricePair -- BondPrice: Bonds are associated with their prices, and bond price pairs are linked to individual bond prices.</li>
+<li>Bond -- Universe; TradeIdea -- Universe; SearchResult *-- Universe: Bonds, trade ideas, and search results are associated with universes.</li>
+<li>TradeIdea *-- Bond: Trade ideas are linked to buy and sell bonds.</li>
+<li>SearchCriteria o-- Filters; SearchResult o-- Facets: Search criteria include various filters, and search results contain facets.</li>
+<li>Order -- SearchCriteria; Page -- SearchCriteria; Order -- SearchResult; Page -- SearchResult: Order and page details are used in both search criteria and results.</li>
+<li>SearchCriteria ..&gt; TradeIdeaService; TradeIdeaService ..|&gt; SearchResult: Search criteria are used by the <code>TradeIdeaService</code> to generate search results.</li>
+</ul>
+<h3 id="interpretation_2">Interpretation</h3>
+<p>This diagram illustrates the discovery process within the trading system, focusing on how trade ideas are identified, filtered, and presented. It highlights the importance of flexible search criteria, including various filters and sorting options, facilitating targeted searches within the bond universe. The presence of statistical value objects like <code>BondPricePairWithStats</code> suggests an analytical approach to identifying potential trade ideas.</p>
+<p>The <code>TradeIdeaService</code> plays a central role, acting as the interface for processing search queries and returning structured results. The model also emphasizes the importance of pagination and sorting in managing and presenting search results, ensuring a user-friendly discovery experience.</p>
+<p>Overall, the <code>Discover</code> section of your domain model portrays a robust system for exploring and identifying trade opportunities in the financial market.</p>
+<h1 id="authenticate-collaborate">Authenticate &amp; Collaborate</h1>
+<p>The <code>Authenticate &amp; Collaborate</code> section of your domain model illustrates the structure and interactions of entities and services involved in user authentication and collaboration in the context of a financial trading system. It includes entities like <code>Team</code>, <code>AuthUser</code>, <code>User</code>, bookmarks, comments, and channels, along with streams for bookmarks and comments. Let's break down the main components and their relationships:</p>
+<h3 id="entities-and-aggregates">Entities and Aggregates</h3>
+<ol>
+<li>Team<ul>
+<li>Represents a team within a company, with attributes like <code>Company</code> and <code>Name</code>.</li>
+</ul>
+</li>
+<li>AuthUser<ul>
+<li>Represents an authenticated user, identified by <code>UID</code> and <code>Email</code>.</li>
+</ul>
+</li>
+<li>User<ul>
+<li>Represents a user within the system, linked to a company, team, and authenticated user ID (<code>UID</code>).</li>
+</ul>
+</li>
+<li>EnrichedUser<ul>
+<li>An aggregate that enriches an <code>AuthUser</code> with more detailed information from <code>User</code>.</li>
+</ul>
+</li>
+<li>Bookmark<ul>
+<li>Represents a bookmarked trade idea, associated with a user, team, and specific trade idea ID.</li>
+</ul>
+</li>
+<li>BookmarkChannel<ul>
+<li>An entity that allows users to publish and subscribe to bookmarks. It is associated with a specific team.</li>
+</ul>
+</li>
+<li>Comment<ul>
+<li>Represents a user's comment, linked to a team and user.</li>
+</ul>
+</li>
+<li>CommentChannel<ul>
+<li>An entity for publishing and subscribing to comments, associated with a team.</li>
+</ul>
+</li>
+</ol>
+<h3 id="streams">Streams</h3>
+<ul>
+<li>BookmarkStream and CommentStream<ul>
+<li>Streams for bookmarks and comments, respectively, facilitating real-time communication and updates.</li>
+</ul>
+</li>
+</ul>
+<h3 id="relationships_4">Relationships</h3>
+<ul>
+<li>AuthUser -- EnrichedUser; User -- EnrichedUser: Authenticated users are enriched with additional information to form <code>EnrichedUser</code>.</li>
+<li>User, Bookmark, Comment --&gt; Team: Users, bookmarks, and comments are associated with a specific team.</li>
+<li>Bookmark, Comment --&gt; User: Bookmarks and comments are linked to individual users.</li>
+<li>Bookmark o-- BookmarkStream; Comment o-- CommentStream: Bookmarks and comments are part of their respective streams.</li>
+<li>BookmarkChannel, CommentChannel --&gt; Team: Channels for bookmarks and comments are tied to specific teams.</li>
+<li>BookmarkChannel, CommentChannel ..|&gt; BookmarkStream, CommentStream: Channels publish to and subscribe from their respective streams.</li>
+<li>User ..|&gt; BookmarkChannel, CommentChannel: Users can publish to and subscribe from bookmark and comment channels.</li>
+</ul>
+<h3 id="interpretation_3">Interpretation</h3>
+<p>The model emphasizes the collaborative aspect of the trading system, where users within a company's teams can interact, share insights, and collaborate on trade ideas. It highlights the importance of real-time communication through bookmark and comment channels, supported by streams that ensure continuous updates and interactions.</p>
+<p>The inclusion of <code>AuthUser</code> and <code>EnrichedUser</code> suggests a robust authentication system that securely manages user identities while enriching them with relevant team and company information. This ensures that users operate within the context of their organizational structures, maintaining data security and compliance.</p>
+<p>The model also demonstrates the use of bookmarks and comments as key collaborative tools, allowing users to highlight important trade ideas and engage in discussions. This fosters a community-driven approach to decision-making and idea generation in the financial trading environment.</p>
+<p>Overall, the <code>Authenticate &amp; Collaborate</code> section of your domain model portrays a sophisticated and secure platform for user authentication and collaboration, enhancing the user experience in a financial trading system.</p>
+<h1 id="notify">Notify</h1>
+<p>The <code>Notify</code> section of your domain model outlines the notification system within your application, primarily focusing on how users receive notifications. Here's a breakdown of the components and their relationships:</p>
+<h3 id="entities-and-value-objects_2">Entities and Value Objects</h3>
+<ol>
+<li>User<ul>
+<li>Represents a user in the system, uniquely identified by <code>UID</code>.</li>
+</ul>
+</li>
+<li>Notification<ul>
+<li>Represents a notification entity containing an <code>ID</code>, <code>Text</code> (message of the notification), and <code>Link</code> (possibly pointing to related content or action).</li>
+</ul>
+</li>
+<li>NotificationChannel<ul>
+<li>A value object that represents a channel through which users can subscribe to receive notifications.</li>
+</ul>
+</li>
+</ol>
+<h3 id="stream_1">Stream</h3>
+<ul>
+<li>NotificationStream<ul>
+<li>A stream that holds all the notifications, serving as a central pipeline through which notifications flow.</li>
+</ul>
+</li>
+</ul>
+<h3 id="relationships_5">Relationships</h3>
+<ul>
+<li>Notification o-- NotificationStream: Notifications are part of the NotificationStream, indicating that all notifications flow through this centralized stream.</li>
+<li>NotificationChannel ..&gt; NotificationStream: The NotificationChannel subscribes to the NotificationStream. This relationship implies that the channel receives data from the stream, likely to forward it to subscribed users.</li>
+<li>User ..&gt; NotificationChannel: Users subscribe to the NotificationChannel to receive notifications. This relationship indicates that notifications are pushed to users through these channels.</li>
+</ul>
+<h3 id="interpretation_4">Interpretation</h3>
+<p>The model illustrates a straightforward notification system. When a notification is created, it enters the NotificationStream. NotificationChannels are subscribed to this stream, and they relay notifications to users who have subscribed to these channels.</p>
+<p>The use of a stream for notifications suggests a real-time or near-real-time system where notifications are continuously pushed through the stream and distributed to users. This approach is effective for applications requiring timely updates, such as messaging apps, social media platforms, or systems where prompt user response is critical.</p>
+<p>The simplicity of the model focuses on the flow of notifications from their creation to the end user. It abstracts away the complexities of how notifications are generated or the criteria for pushing specific notifications to particular users. This high-level view is beneficial for understanding the overall architecture without getting bogged down in implementation details.</p>
+<p>In summary, the <code>Notify</code> section of your domain model provides a clear picture of the notification delivery mechanism in your application, emphasizing real-time communication and user engagement.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Data-Source-Specifications/" class="btn btn-neutral float-left" title="Data Source Specifications"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../EWM-DOD-Definitions/" class="btn btn-neutral float-right" title="Tolerance Metrics ewm_tolerance and dod_tolerance">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Data-Source-Specifications/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../EWM-DOD-Definitions/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

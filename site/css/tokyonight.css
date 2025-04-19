@@ -1,0 +1,80 @@
+/* Tokyo Night Theme */
+
+body {
+    background-color: #f2f2f8; /* Tokyo Night background */
+    color: #030303; /* Foreground text color */
+}
+
+a {
+    color: #7aa2f7; /* Link color */
+}
+
+a:hover {
+    color: #2ac3de; /* Link hover color */
+}
+
+.md-header, .md-footer {
+    background-color: #1a1b26; /* Header and footer background */
+    color: #c0caf5; /* Header and footer text color */
+}
+
+.md-nav__title, .md-nav__link {
+    color: #c0caf5; /* Navigation text color */
+}
+
+.md-nav__link:hover {
+    color: #7aa2f7; /* Navigation link hover color */
+}
+
+.md-content {
+    background-color: #1a1b26; /* Content background */
+    color: #c0caf5; /* Content text color */
+}
+
+code, pre {
+    background-color: #1a1b26; /* Code block background */
+    color: #c0caf5; /* Code block text color */
+    border-radius: 4px;
+    padding: 4px;
+}
+
+table {
+    background-color: #1a1b26; /* Table background */
+    color: #c0caf5; /* Table text color */
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #3b4261; /* Table border color */
+    padding: 8px;
+}
+
+.md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4, .md-typeset h5, .md-typeset h6 {
+    color: #7aa2f7; /* Heading colors */
+}
+
+.md-typeset blockquote {
+    border-left: 4px solid #7aa2f7; /* Blockquote border color */
+    color: #c0caf5; /* Blockquote text color */
+    background-color: #1a1b26; /* Blockquote background */
+    padding: 8px 16px;
+    margin: 16px 0;
+}
+
+.md-typeset a {
+    color: #7aa2f7; /* Inline link color */
+}
+
+.md-typeset a:hover {
+    color: #2ac3de; /* Inline link hover color */
+}
+
+.md-typeset table th {
+    background-color: #1a1b26; /* Table header background */
+    color: #c0caf5; /* Table header text color */
+}
+
+.md-typeset table td {
+    background-color: #1a1b26; /* Table cell background */
+    color: #c0caf5; /* Table cell text color */
+}

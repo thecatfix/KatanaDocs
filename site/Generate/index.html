@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="John Shelburne" /><link rel="canonical" href="https://www.johnshelburne.com/mkdocs/Generate/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Generate Domain - MkDocs Material</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/tokyonight.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Generate Domain";
+        var mkdocs_page_input_path = "Generate.md";
+        var mkdocs_page_url = "/mkdocs/Generate/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="..">
+          <img src="../images/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../1-Ingest-Domain/">The Ingest Domain</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Bloomberg/">Bloomberg</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Bond-Universe/">Purpose</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Candidate/">Candidate</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Classifications/">Classification Filtering in Bonds</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Data-Source-Specifications/">Data Source Specifications</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Domain-Model/">Combined Domain Model Diagram</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../EWM-DOD-Definitions/">Tolerance Metrics ewm_tolerance and dod_tolerance</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Front-End/">The Front End</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Functions/">Functions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../GCP-Alternatives/">GCP Current Workflow</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Generate Domain</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#key-entities-and-specifications-in-the-generate-domain">Key Entities and Specifications in the Generate Domain:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#generate-process-flow">Generate Process Flow:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#interpretation-of-the-generate-domain">Interpretation of the Generate Domain:</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Idea-Generation/">Idea Candidate Creation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Important-Definitions/">Understanding Key Concepts**</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Questions/">Research on Current Questions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../model/">Forecasting Models - How many exist?</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../stationary-model/">Stationarity Model</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">MkDocs Material</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Generate Domain</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="generate-domain">Generate Domain</h1>
+<p>In the <strong>Generate Domain</strong> of the Katana Domain Model, the process focuses on transforming raw data about bonds and their prices into actionable <strong>Trade Ideas</strong>. This domain is all about filtering, refining, and structuring bond data to generate meaningful trade ideas for financial decision-making. Let's break down the key components, entities, and specifications involved, as well as their roles in this process.</p>
+<p><img alt="diagram.drawio.svg" src="Domain-Model/uploads/e05cce4fcbfcb81d5b9d1df26bd71a76/diagram.drawio.svg" /></p>
+<h3 id="key-entities-and-specifications-in-the-generate-domain">Key Entities and Specifications in the Generate Domain:</h3>
+<ol>
+<li>
+<p><strong>Bond</strong>:</p>
+<pre><code>- This entity represents a financial instrument (a bond) with key attributes like `ISIN`, `Universe`, and various metadata (e.g., `IssuerName`, `CountryOfRisk`, `RatingCategory`, etc.).
+- In the Generate Domain, bonds are the primary assets under consideration for trade ideas.
+</code></pre>
+</li>
+<li>
+<p><strong>BondPrice</strong>:</p>
+<pre><code>- This entity captures the price of a bond at a particular moment in time. It includes attributes like the `ISIN` (identifying the bond), `AsOf` (time of the price record), and the `ZSpread` (a measure of bond risk compared to a risk-free bond).
+- The bond's price history plays a critical role in evaluating trade ideas since pricing data over time provides insights into the bond's risk and potential profitability.
+</code></pre>
+</li>
+<li>
+<p><strong>BondSpec</strong> (Specification for Bonds):</p>
+<pre><code>- This is a specification that defines constraints or filters for bonds.
+- **Key attributes**:
+        - `MaxMonthsToMature`: Specifies the maximum remaining time to maturity for a bond to be considered.
+        - `MinAmountOutstanding`: Ensures the bond has a sufficient amount of outstanding debt to be included (as liquidity is crucial for tradability).
+- The **BondSpec** ensures that only bonds meeting these criteria are included in the generation of trade ideas.
+</code></pre>
+</li>
+<li>
+<p><strong>BondPriceSpec</strong> (Specification for Bond Prices):</p>
+<pre><code>- This defines constraints on bond prices.
+- **Key attributes**:
+        - `MinAsOf`: Ensures the price data is recent enough to be considered.
+        - `MinZSpread` and `MaxZSpread`: These define acceptable risk levels for bonds (via the ZSpread).
+- **BondPriceSpec** ensures that only bonds with acceptable risk and up-to-date price data are included in the generation process.
+</code></pre>
+</li>
+<li>
+<p><strong>BondWithPrices</strong> (Value Object):</p>
+<pre><code>- A value object representing a bond along with its associated price history.
+- This combination allows the system to analyze both the bond's static attributes (like `IssuerName` and `RatingCategory`) and its dynamic attributes (like price changes and `ZSpread`) over time.
+</code></pre>
+</li>
+<li>
+<p><strong>BondWithPricesSpec</strong> (Specification for Bonds with Price History):</p>
+<pre><code>- This specification filters bonds and their associated price histories based on various metrics.
+- **Key attributes**:
+        - `MaxEWMScore` and `MaxDODScore`: These scores represent risk and price volatility metrics, respectively. Bonds that exceed these thresholds are excluded.
+        - `MinLatestAsOf`: Ensures that the price data is recent.
+        - `MinNrConsecutivePrices`: Requires bonds to have a sufficient history of consecutive price records.
+- The **BondWithPricesSpec** ensures that only bonds with stable price histories and acceptable risk are considered.
+</code></pre>
+</li>
+<li>
+<p><strong>TradeIdeaCandidate</strong> (Entity):</p>
+<pre><code>- This entity represents potential trade ideas that are yet to be finalized or confirmed.
+- **Key attributes**:
+        - `ID`: Uniquely identifies the trade idea candidate.
+        - `IsBookmarked`: A boolean indicating if this trade idea has been flagged for special attention.
+        - Various metrics such as `SpreadLastValue`, `SpreadMean`, `SpreadZScore`, and `PearsonScore` are used to evaluate the viability of the trade idea based on bond price spreads and other financial indicators.
+</code></pre>
+</li>
+<li>
+<p><strong>TradeIdeaCandidateSpec</strong> (Specification for Trade Idea Candidates):</p>
+<pre><code>- This specification defines the criteria for generating trade idea candidates.
+- **Key attributes**:
+        - `BookmarksExempt`: A boolean that determines if bookmarks influence the trade idea generation process.
+        - `MinSpreadMeanReversion` and `MinNrOverlappingPrices`: These attributes ensure the spread between bond prices shows a trend or reversion to the mean, and that there is sufficient overlap in pricing history between the two bonds in the trade idea.
+        - `MinPearsonScore`: A threshold to ensure a minimum correlation between the bonds in the trade idea.
+- **TradeIdeaCandidateSpec** ensures that only trade ideas with sufficiently reliable financial characteristics are generated.
+</code></pre>
+</li>
+<li>
+<p><strong>TradeIdea</strong> (Entity):</p>
+<pre><code>- This entity represents a final, actionable trade idea, created from one or more trade idea candidates that passed all the specified criteria.
+- **Key attributes**:
+        - `ID`: A unique identifier for the trade idea, typically derived from the bonds involved.
+        - The `BondBuy` and `BondSell` attributes specify which bonds are to be purchased and sold, respectively.
+- A **TradeIdea** is generated after all the filtering and analysis has been completed and is ready for evaluation by traders or algorithms.
+</code></pre>
+</li>
+<li>
+<p><strong>TradeIdeaSpec</strong> (Specification for Trade Ideas):</p>
+<pre><code>- This is the final layer of specification that trade ideas must pass to be considered viable.
+- **Key attributes**:
+        - `MinSimilarityScore`, `MinPearsonScore`, and `MinZScoreForIdea`: These metrics ensure that only trade ideas with strong financial indicators are selected. For example, the Pearson Score measures the correlation between bond price movements.
+        - `NeedsToBeIdea`: A boolean indicating whether the candidate trade must be generated as a trade idea.
+- **TradeIdeaSpec** ensures that only the best trade ideas, based on strong financial metrics, are selected for action.
+</code></pre>
+</li>
+</ol>
+<h3 id="generate-process-flow">Generate Process Flow:</h3>
+<ol>
+<li>
+<p><strong>Filter Bonds</strong>:</p>
+<pre><code>- Bonds are first filtered through the **BondSpec**. Only bonds that meet criteria such as maximum months to maturity and a minimum amount of outstanding debt are considered.
+</code></pre>
+</li>
+<li>
+<p><strong>Filter Bond Prices</strong>:</p>
+<pre><code>- Once the bonds are selected, their price histories are filtered using the **BondPriceSpec**, ensuring that only bonds with recent and acceptable price data (such as ZSpread) move forward in the process.
+</code></pre>
+</li>
+<li>
+<p><strong>Analyze Bond and Price History</strong>:</p>
+<pre><code>- The **BondWithPricesSpec** further narrows down bonds based on their price volatility (`EWMScore` and `DODScore`), ensuring that only bonds with stable price histories and minimal volatility are included.
+</code></pre>
+</li>
+<li>
+<p><strong>Generate Trade Idea Candidates</strong>:</p>
+<pre><code>- Trade idea candidates are generated from pairs of bonds, where one bond is considered for buying and the other for selling.
+- The **TradeIdeaCandidateSpec** applies filters to ensure that the bond pairs have a reasonable spread relationship (`SpreadMeanReversion`), sufficient price overlap, and correlation (`PearsonScore`).
+</code></pre>
+</li>
+<li>
+<p><strong>Refine Trade Ideas</strong>:</p>
+<pre><code>- After trade idea candidates are created, they are further refined based on **TradeIdeaSpec**, which looks for the strongest candidates by evaluating financial metrics such as similarity scores and Z-scores.
+</code></pre>
+</li>
+<li>
+<p><strong>Generate Final Trade Ideas</strong>:</p>
+<pre><code>- Once all filters and specifications have been applied, final **TradeIdeas** are generated. These ideas represent actionable trading opportunities, where one bond is suggested for purchase and the other for sale.
+</code></pre>
+</li>
+</ol>
+<h3 id="interpretation-of-the-generate-domain">Interpretation of the Generate Domain:</h3>
+<ul>
+<li>
+<p>The Generate Domain focuses on turning raw bond and bond price data into well-analyzed, viable trade ideas.</p>
+</li>
+<li>
+<p><strong>BondSpec</strong> and <strong>BondPriceSpec</strong> filter out bonds and price data that do not meet the necessary criteria, while <strong>BondWithPricesSpec</strong> ensures that only bonds with stable price histories are considered.</p>
+</li>
+<li>
+<p><strong>TradeIdeaCandidateSpec</strong> analyzes bond pairs and their pricing relationships to generate trade idea candidates, and <strong>TradeIdeaSpec</strong> applies final filtering to produce actionable <strong>Trade Ideas</strong>.</p>
+</li>
+<li>
+<p>This process is highly systematic, leveraging a series of specifications to ensure that the resulting trade ideas are backed by strong financial metrics, minimizing risk, and maximizing potential for profitable trades.</p>
+</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../GCP-Alternatives/" class="btn btn-neutral float-left" title="GCP Current Workflow"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Idea-Generation/" class="btn btn-neutral float-right" title="Idea Candidate Creation">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../GCP-Alternatives/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Idea-Generation/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

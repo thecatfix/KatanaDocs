@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="John Shelburne" /><link rel="canonical" href="https://www.johnshelburne.com/mkdocs/model/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Forecasting Models - How many exist? - MkDocs Material</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/tokyonight.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Forecasting Models - How many exist?";
+        var mkdocs_page_input_path = "model.md";
+        var mkdocs_page_url = "/mkdocs/model/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="..">
+          <img src="../images/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../1-Ingest-Domain/">The Ingest Domain</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Bloomberg/">Bloomberg</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Bond-Universe/">Purpose</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Candidate/">Candidate</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Classifications/">Classification Filtering in Bonds</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Data-Source-Specifications/">Data Source Specifications</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Domain-Model/">Combined Domain Model Diagram</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../EWM-DOD-Definitions/">Tolerance Metrics ewm_tolerance and dod_tolerance</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Front-End/">The Front End</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Functions/">Functions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../GCP-Alternatives/">GCP Current Workflow</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Generate/">Generate Domain</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Idea-Generation/">Idea Candidate Creation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Important-Definitions/">Understanding Key Concepts**</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Questions/">Research on Current Questions</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Forecasting Models - How many exist?</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#prediction-model">Prediction Model</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#classes">Classes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#modelresult">ModelResult</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#attributes">Attributes</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#model">Model</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#attributes_1">Attributes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#methods">Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#modelloader">ModelLoader</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#methods_1">Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#type-variables">Type Variables</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-the-model-id">What is the model id?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#finding-other-models-possibly-in-experiments">Finding other models (possibly in experiments)</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../stationary-model/">Stationarity Model</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">MkDocs Material</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Forecasting Models - How many exist?</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="forecasting-models-how-many-exist">Forecasting Models - How many exist?</h1>
+<h2 id="prediction-model">Prediction Model</h2>
+<p><a href="https://gitlab.com/katanalabs/katana/-/blob/a4f73f37a8c9a1c0baf2e614125739d41ac0d908/src/generate/components/domain/model.py">model.py</a></p>
+<p>This documentation provides an overview of the <code>model.py</code> module, including descriptions of the <code>ModelResult</code>, <code>Model</code>, and <code>ModelLoader</code> classes, their attributes, and methods. It's formatted in a way that's suitable for a GitLab wiki and can be easily integrated into your project documentation.</p>
+<p>This module defines abstract base classes for machine learning models and model loaders used in the project.</p>
+<h2 id="classes">Classes</h2>
+<h3 id="modelresult">ModelResult</h3>
+<p>Represents the result of a model prediction.</p>
+<h4 id="attributes">Attributes</h4>
+<ul>
+<li><code>alert</code> (bool): Indicates whether an alert should be triggered.</li>
+<li><code>alternative</code> (bool): Indicates whether this is an alternative result.</li>
+<li><code>similarity_score</code> (Optional[float]): The similarity score of the prediction.</li>
+<li><code>pearson_score</code> (Optional[float]): The Pearson correlation score.</li>
+<li><code>adf_score</code> (Optional[float]): The Augmented Dickey-Fuller test score.</li>
+</ul>
+<h3 id="model">Model</h3>
+<p>An abstract base class for machine learning models.</p>
+<h4 id="attributes_1">Attributes</h4>
+<ul>
+<li><code>id</code> (str): A unique identifier for the model.</li>
+</ul>
+<h4 id="methods">Methods</h4>
+<h5 id="_preprocess">_preprocess</h5>
+<pre><code class="language-python">@abstractmethod
+def _preprocess(self, input: PI) -&gt; PR:
+</code></pre>
+<p>Model-specific transforms of the input data.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>input</code> (PI): The input data to preprocess.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>PR</code>: The preprocessed data.</li>
+</ul>
+<h5 id="predict">predict</h5>
+<pre><code class="language-python">@abstractmethod
+def predict(self, candidate: IdeaCandidate) -&gt; ModelResult:
+</code></pre>
+<p>Makes a prediction for a given candidate.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>candidate</code> (IdeaCandidate): The candidate to make a prediction for.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>ModelResult</code>: The result of the prediction.</li>
+</ul>
+<h5 id="save">save</h5>
+<pre><code class="language-python">def save(self):
+</code></pre>
+<p>Save the model (typically weights, e.g., for a neural network) to a path in GCloud.</p>
+<h3 id="modelloader">ModelLoader</h3>
+<p>An abstract base class for model loaders.</p>
+<h4 id="methods_1">Methods</h4>
+<h5 id="load">load</h5>
+<pre><code class="language-python">@abstractmethod
+def load(self, model_path: str, model_options: Optional[Dict[str, Any]]) -&gt; Model:
+</code></pre>
+<p>Loads a model from a specified path.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>model_options</code> (Optional[Dict[str, Any]]): Additional options for loading the model.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>Model</code>: The loaded model.</li>
+</ul>
+<h3 id="type-variables">Type Variables</h3>
+<ul>
+<li><code>PI</code>: Type variable for model input.</li>
+<li><code>PR</code>: Type variable for preprocessed input.</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<p>This module provides abstract base classes that should be inherited and implemented by concrete model and model loader classes. The <code>Model</code> class defines the interface for machine learning models used in the project, while the <code>ModelLoader</code> class defines how these models should be loaded.</p>
+<p><strong>Example usage (implementation in a derived class):</strong></p>
+<pre><code class="language-python">class ConcreteModel(Model[InputType, ProcessedType]):
+        def _preprocess(self, input: InputType) -&gt; ProcessedType:
+                # Implement preprocessing logic
+                pass
+
+        def predict(self, candidate: IdeaCandidate) -&gt; ModelResult:
+                # Implement prediction logic
+                pass
+
+class ConcreteModelLoader(ModelLoader):
+        def load(self, model_path: str, model_options: Optional[Dict[str, Any]]) -&gt; Model:
+                # Implement model loading logic
+                pass
+</code></pre>
+<p><strong>Note:</strong> The actual implementation of these classes will depend on the specific requirements of your project and the machine learning models you're using.</p>
+<h2 id="what-is-the-model-id">What is the model id?</h2>
+<p>Based on the <code>parse_arguments</code> function in the code, the model ID is specified as follows:</p>
+<pre><code class="language-python">parser.add_argument('--model_id',
+                                        type=str,
+                                        default='stationarity-model_a875ef6f-e259-4c42-8d49-aa8484bd4713')
+</code></pre>
+<p>The default model ID is <code>'stationarity-model_a875ef6f-e259-4c42-8d49-aa8484bd4713'</code>. This appears to be a unique identifier for the model, likely stored in Google Cloud Storage (GCS). The ID consists of two parts:
+1. The model type: <code>"stationarity-model"</code>
+2. A UUID: <code>"a875ef6f-e259-4c42-8d49-aa8484bd4713"</code></p>
+<p>This model ID is used to locate and load the specific model for generating trade ideas. It's worth noting that this is the default value, and it could be overridden by providing a different model ID as a command-line argument when running the pipeline.</p>
+<h2 id="finding-other-models-possibly-in-experiments">Finding other models (possibly in experiments)</h2>
+<p>To find other model IDs, you should look in the following places:</p>
+<ul>
+<li><strong>Google Cloud Storage (GCS):</strong> Check the GCS bucket specified by the <code>--models_bucket</code> argument (default is <code>'models'</code>). Look for objects or folders with names following a similar pattern to the default model ID.</li>
+<li><strong>Configuration Files:</strong> Search for YAML, JSON, or Python configuration files in your project that might list available models.</li>
+<li><strong>Database:</strong> If your project uses a database to track models, query it for a list of model IDs.</li>
+<li><strong>Model Registry:</strong> If you're using a model registry (like MLflow or Vertex AI Model Registry), check there for registered models.</li>
+<li><strong>CI/CD Pipeline Configurations:</strong> Look in your CI/CD configurations (e.g., <code>.gitlab-ci.yml</code>, Jenkins files) for model ID references.</li>
+<li><strong>Codebase:</strong> Search your codebase for files or functions that might define or use model IDs.</li>
+<li><strong>Logs:</strong> Examine pipeline run logs to see which model IDs have been used in past executions.</li>
+<li><strong>Team Communication:</strong> Ask your data science or machine learning team if they maintain a list of current model IDs.</li>
+<li><strong>Model Training Scripts:</strong> Look for scripts that train models; they might generate and output model IDs.</li>
+</ul>
+<p>Since there's an abstract <code>Model</code> class defined, this class is designed to be generic and can be extended to create different types of models.</p>
+<p>The <code>Model</code> class in this file is abstract and defines a general structure for models, including methods for preprocessing, prediction, and saving.</p>
+<p>To find out if there are other models in your group or project that could replace the stationary model, you might want to:</p>
+<ul>
+<li>Check other Python files in your project for classes that inherit from this <code>Model</code> class.</li>
+<li>Look for implementations of the <code>ModelLoader</code> class, which might give clues about what models are available.</li>
+<li>Check the version control history to see if there have been recent additions or changes to model implementations.
+```</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Questions/" class="btn btn-neutral float-left" title="Research on Current Questions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../stationary-model/" class="btn btn-neutral float-right" title="Stationarity Model">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Questions/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../stationary-model/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

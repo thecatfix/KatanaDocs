@@ -1,0 +1,33 @@
+site_name: MkDocs Material
+site_description: A documentation site for MkDocs Material
+site_author: John Shelburne
+site_url: https://www.catfix.biz/katanawiki
+theme:
+  name: readthedocs
+  features:
+    - navigation.tabs
+    - navigation.expand
+    - navigation.top
+    - navigation.sections
+extra_css:
+  - css/tokyonight.css
+
+locale: en
+
+include_search_page: false
+search_index_only: false
+
+highlightjs: true
+hljs_languages: []
+hljs_style: github
+
+analytics:
+  gtag: null
+  anonymize_ip: false
+
+include_homepage_in_sidebar: true
+prev_next_buttons_location: bottom
+navigation_depth: 4
+titles_only: false
+sticky_navigation: true
+logo: 

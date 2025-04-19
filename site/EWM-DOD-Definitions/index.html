@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="John Shelburne" /><link rel="canonical" href="https://www.johnshelburne.com/mkdocs/EWM-DOD-Definitions/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Tolerance Metrics ewm_tolerance and dod_tolerance - MkDocs Material</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/tokyonight.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Tolerance Metrics ewm_tolerance and dod_tolerance";
+        var mkdocs_page_input_path = "EWM-DOD-Definitions.md";
+        var mkdocs_page_url = "/mkdocs/EWM-DOD-Definitions/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="..">
+          <img src="../images/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../1-Ingest-Domain/">The Ingest Domain</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Bloomberg/">Bloomberg</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Bond-Universe/">Purpose</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Candidate/">Candidate</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Classifications/">Classification Filtering in Bonds</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Data-Source-Specifications/">Data Source Specifications</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Domain-Model/">Combined Domain Model Diagram</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Tolerance Metrics ewm_tolerance and dod_tolerance</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#definitions">Definitions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#why-are-these-tolerances-important">Why Are These Tolerances Important?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#application-in-the-generate-process">Application in the Generate Process</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Front-End/">The Front End</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Functions/">Functions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../GCP-Alternatives/">GCP Current Workflow</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Generate/">Generate Domain</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Idea-Generation/">Idea Candidate Creation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Important-Definitions/">Understanding Key Concepts**</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Questions/">Research on Current Questions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../model/">Forecasting Models - How many exist?</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../stationary-model/">Stationarity Model</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">MkDocs Material</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Tolerance Metrics ewm_tolerance and dod_tolerance</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="tolerance-metrics-ewm_tolerance-and-dod_tolerance">Tolerance Metrics <code>ewm_tolerance</code> and <code>dod_tolerance</code></h1>
+<p>Parameters <code>ewm_tolerance</code> and <code>dod_tolerance</code> are used to control the sensitivity or tolerance levels of specific financial metrics when evaluating bonds and their prices over time. These parameters typically play a role in filtering bonds based on their historical performance, particularly in relation to price stability and volatility.</p>
+<h2 id="definitions">Definitions</h2>
+<ol>
+<li>
+<p><strong>ewm_tolerance</strong> (Expected Weighted Average Mean Tolerance):</p>
+<pre><code>        - **EWM** stands for **Exponentially Weighted Moving Average**. This is a statistical technique used to assign greater weight to more recent data points while discounting older data.
+        - **ewm_tolerance** sets the threshold for how much variation or deviation is allowed in a bond's exponentially weighted average price movement. If the bond's price volatility (as measured by EWM) exceeds this tolerance level, the bond may be excluded from further consideration in the trade idea generation process.
+        - **Purpose**: To ensure that bonds with stable, predictable price trends are considered for trade ideas. Bonds with excessive price swings or volatility are filtered out by setting a lower tolerance for price fluctuations.
+
+        **Example**: If `ewm_tolerance` is set to 5.0, this means that the bond's price volatility, as calculated using the EWM method, must be within a 5% deviation to be included in the analysis. Bonds with volatility beyond this threshold would be excluded.
+</code></pre>
+</li>
+<li>
+<p><strong>dod_tolerance</strong> (Day Over Day Tolerance):</p>
+<pre><code>        - **DOD** stands for **Day Over Day** and refers to changes in a bond's price from one day to the next.
+        - **dod_tolerance** defines the allowable threshold for day-over-day price changes. If the bond's day-over-day price fluctuations exceed the tolerance level, the bond might be considered too volatile and will be excluded from further analysis.
+        - **Purpose**: This tolerance ensures that only bonds with relatively stable day-to-day price movements are considered. Large or erratic day-over-day price swings are generally seen as a sign of high risk, and bonds exceeding this tolerance are filtered out.
+
+        **Example**: If `dod_tolerance` is set to 5.0, the bond's day-to-day price fluctuations must stay within 5% for the bond to be included in the analysis. Bonds with daily price changes beyond this threshold would be excluded from further consideration.
+</code></pre>
+</li>
+</ol>
+<h2 id="why-are-these-tolerances-important">Why Are These Tolerances Important?</h2>
+<p>Both <strong>ewm_tolerance</strong> and <strong>dod_tolerance</strong> are designed to filter out bonds that exhibit too much price volatility. The goal is to focus on bonds with more stable price patterns, which are often preferred in trade ideas because they carry less risk. By setting thresholds for acceptable levels of volatility, the system can narrow down the pool of bonds to those that are more predictable and less likely to be affected by sudden price swings.</p>
+<h2 id="application-in-the-generate-process">Application in the Generate Process</h2>
+<ul>
+<li>These tolerances are applied as part of the <strong>BondWithPricesSpec</strong>, which filters bonds with associated pricing data. If the bond's price volatility, as measured by the EWM and DOD scores, exceeds the defined tolerance levels, that bond is excluded from the trade idea generation process.</li>
+<li>Bonds that meet both the <strong>ewm_tolerance</strong> and <strong>dod_tolerance</strong> thresholds are considered more stable and are passed on for further evaluation as <strong>TradeIdeaCandidates</strong>.
+```</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Domain-Model/" class="btn btn-neutral float-left" title="Combined Domain Model Diagram"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Front-End/" class="btn btn-neutral float-right" title="The Front End">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Domain-Model/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Front-End/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
